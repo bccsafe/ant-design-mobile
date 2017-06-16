@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { NativeProps, WebProps } from '../baseType';
 
 export interface FlexProps {
@@ -5,7 +6,7 @@ export interface FlexProps {
   wrap?: 'nowrap'|'wrap'|'wrap-reverse';
   justify?: 'start'|'end'|'center'|'between'|'around';
   align?: 'top'|'start'|'middle'|'center'|'bottom'|'end'|'baseline'|'stretch';
-  children?: JSX.Element;
+  children?: JSX.Element | JSX.Element[];
   disabled?: boolean;
 }
 
@@ -23,7 +24,7 @@ export interface FlexNativeProps extends NativeProps, FlexProps {
 
 export interface FlexItemProps {
   disabled?: boolean;
-  children?: JSX.Element;
+  children?: ReactNode;
 }
 
 export interface FlexItemWebProps extends WebProps, FlexItemProps {

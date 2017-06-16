@@ -4,7 +4,7 @@ import { NativeProps, WebProps } from '../baseType';
 export interface ListProps {
   renderHeader?: Function | JSX.Element;
   renderFooter?: Function | JSX.Element;
-  children?: JSX.Element;
+  children?: JSX.Element | JSX.Element[];
 }
 
 export interface ListWebProps extends WebProps, ListProps {
@@ -24,9 +24,9 @@ export interface ListItemProps {
   align?: 'top'|'middle'|'bottom';
   disabled?: boolean;
   multipleLine?: boolean;
-  children?: JSX.Element;
+  children?: ReactNode;
   thumb?: ReactNode | null;
-  extra?: React.ReactNode;
+  extra?: ReactNode;
   arrow?: 'horizontal'|'down'|'up'|'empty'|'';
   wrap?: boolean;
 }
@@ -58,7 +58,7 @@ export interface ListItemNativeProps extends NativeProps, ListItemProps {
 }
 
 export interface BriefProps {
-  children?: JSX.Element;
+  children?: ReactNode;
   wrap?: boolean;
 }
 
