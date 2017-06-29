@@ -1,6 +1,6 @@
 {
   "name": "antd-mobile",
-  "version": "1.3.1-alpha.4",
+  "version": "1.4.0",
   "description": "基于 React 的移动设计规范实现",
   "homepage": "http://mobile.ant.design",
   "keywords": [
@@ -66,8 +66,8 @@
     "warning": "^3.0.0"
   },
   "devDependencies": {
-    "@types/react": "15.0.21",
-    "@types/react-dom": "~15.5.0",
+    "@types/react": "15.0.31",
+    "@types/react-dom": "~15.5.1",
     "@types/react-native": "~0.42.0",
     "antd": "2.x",
     "antd-demo-jest": "^1.2.0",
@@ -109,6 +109,7 @@
     "qrcode.react": "^0.7.1",
     "rc-form": "1.x",
     "react": "^15.0.0",
+    "react-copy-to-clipboard": "^5.0.0",
     "react-document-title": "^2.0.1",
     "react-dom": "^15.0.0",
     "react-github-button": "^0.1.9",
@@ -118,7 +119,7 @@
     "react-native-mock": "^0.3.1",
     "react-navigation": "^1.0.0-beta.11",
     "react-test-renderer": "^15.4.2",
-    "stylelint": "^7.10.1",
+    "stylelint": "^7.12.0",
     "stylelint-config-standard": "^16.0.0",
     "svg-sprite-loader": "^0.3.1",
     "typescript": "~2.3.0",
@@ -130,7 +131,8 @@
     "tslint": "antd-tools run ts-lint && npm run compile && rm -rf lib",
     "tslint-fix": "antd-tools run ts-lint-fix && npm run compile && rm -rf lib",
     "demolint": "RUN_ENV=DEMO eslint components/*/demo/*.md --ext '.md'",
-    "stylelint": "stylelint \"components/**/*.less\" --syntax less",
+    "stylelint": "stylelint \"{site,components}/**/*.less\" --syntax less",
+    "stylelint-fix": "stylelint \"{site,components}/**/*.less\" --syntax less --fix",
     "eslint-fix": "eslint --fix site scripts ./*.js --ext '.js,.jsx' && eslint-tinker ./components/*/demo/*.md",
     "applint": "eslint rn-kitchen-sink --ext '.js'",
     "pre-publish": "node ./scripts/build-less-entry",
@@ -173,6 +175,7 @@
     "{tests,site,scripts,components}/**/*.{js,jsx}": [
       "lint-staged:es"
     ],
+    "{site,components}/**/*.less": "stylelint --syntax less",
     "components/*/demo/*.md": [
       "lint-staged:demo"
     ]

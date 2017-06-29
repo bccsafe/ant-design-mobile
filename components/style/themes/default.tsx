@@ -112,8 +112,11 @@ export default {
   // 组件变量
   // ---
 
+  actionsheet_item_height: 50,
+  actionsheet_item_font_size: 18,
+
   // button
-  button_height: 42,
+  button_height: 47,
   button_font_size: 18,
 
   button_height_sm: 23,
@@ -133,7 +136,7 @@ export default {
   // list
   list_title_height: 30,
   list_item_height_sm: 35,
-  list_item_height: 45,
+  list_item_height: 44,
 
   // input
   input_label_width: 17,       // InputItem、TextareaItem 文字长度基础值

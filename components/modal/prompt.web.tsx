@@ -8,7 +8,9 @@ import Modal from './Modal';
 export default function a(...args) {
   if (!args || !args[2]) {
     // console.log('Must specify callbackOrActions');
-    return;
+    return {
+      close: () => {},
+    };
   }
 
   const prefixCls = 'am-modal';
@@ -71,8 +73,10 @@ export default function a(...args) {
 
   let content = (
     <div>
-      {args[1]}
-      {inputDom}
+      <label>
+        {args[1]}
+        {inputDom}
+      </label>
     </div>
   );
 

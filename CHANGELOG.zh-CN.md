@@ -14,6 +14,40 @@ timeline: true
 
 ---
 
+## 1.4.0
+
+`2017-06-24`
+
+- **Feature**
+  - `Button` 新增 `activeClassName` 以自定义点击时类名。([3331f00](https://github.com/ant-design/ant-design-mobile/commit/3331f00b1a89d7fb76dcffa554f1cf9b165819d9))
+  - `Card.Header` 的 thumb 支持 React.Element。([#1484](https://github.com/ant-design/ant-design-mobile/issues/1484))
+  - `InputItem` 支持通过 locale 来自定义内置文案。([#1475](https://github.com/ant-design/ant-design-mobile/issues/1475))
+
+- **Bug Fix**
+  - 修复 ListView sticky header 被遮挡的问题。([#1456](https://github.com/ant-design/ant-design-mobile/issues/1456))
+  - `InputItem` 修复当`type=money` 虚拟键盘无法隐藏的问题。([#1468](https://github.com/ant-design/ant-design-mobile/issues/1468))
+
+
+- **Improve && Enhancement**
+  - `InputItem` 背景图片替换为 svg。([#1470](https://github.com/ant-design/ant-design-mobile/issues/1470))
+  - `Button` 高度增大为 `94px`。
+  - `ListItem` 高度减小为 `88px`。
+  - `Result` 间距，字体，颜色调整。
+
+## 1.3.1
+
+`2017-06-19`
+
+- **Feature**
+  - `PickerView` 支持`indicatorStyle`。([3184179d2](https://github.com/ant-design/ant-design-mobile/commit/3184179d2ba4b5bccde83d8590d3e538fab0ad22))
+
+- **Bug Fix**
+  - `InputItem` 修复当`type=money`时`disabled`和`editable`不生效的问题。([#1437](https://github.com/ant-design/ant-design-mobile/issues/1437))
+  - `Menu` 修复当数据源二级数据不唯一时导致的问题。([#1427](https://github.com/ant-design/ant-design-mobile/issues/1427))
+  - `Slider` [#1439](https://github.com/ant-design/ant-design-mobile/pull/1439)，更新TS definition
+  - `ListView` 修复scrollTo的问题 ([97ed6795](https://github.com/ant-design/ant-design-mobile/commit/97ed67955243643fcc1de3debd0d507b87d6380b))
+  - React-Native `Flex` `Flex.Item`支持`children`数组。([#1442](https://github.com/ant-design/ant-design-mobile/pull/1442))
+
 ## 1.3.0
 
 `2017-06-09`
